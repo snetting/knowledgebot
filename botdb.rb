@@ -61,7 +61,7 @@ class DB
         #if val.downcase.include?(sterm) then
         val.encode!('UTF-8', 'binary', invalid: :replace, undef: :replace, replace: '')
         if val.downcase =~ /\b#{Regexp.escape(sterm)}s?\b/ then
-          puts "Found match for #{sterm.downcase}, index #{index}"  #, data: #{val}" 
+          #puts "Found match for #{sterm.downcase}, index #{index}"  #, data: #{val}" 
           @scoredata[index] += 1
         end
       end 
